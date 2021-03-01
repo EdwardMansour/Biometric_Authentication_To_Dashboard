@@ -89,10 +89,8 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
       yield LoadingState(
         isLoading: false,
       );
-      this.close();
       //! Navigate to the home page
-      if(_isAuthenticating)
-      sl<NavigationService>().navigateTo('/home');
+      if (_isAuthenticating) sl<NavigationService>().navigateTo('/home');
     } catch (e) {
       //! Set the loading false
       yield LoadingState(
